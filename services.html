@@ -8,7 +8,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -39,9 +38,16 @@
                 <a href="services.html" class="font-medium blue-accent">サービス</a>
                 <a href="contact.html" class="font-medium hover:text-blue-600">お問い合わせ</a>
             </div>
-            <button class="md:hidden focus:outline-none">
+            <button id="menuBtn" class="md:hidden focus:outline-none">
                 <i data-feather="menu"></i>
             </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden flex-col space-y-4 mt-4 px-6 md:hidden">
+            <a href="index.html" class="font-medium hover:text-blue-600">ホーム</a>
+            <a href="about.html" class="font-medium hover:text-blue-600">会社概要</a>
+            <a href="services.html" class="font-medium blue-accent">サービス</a>
+            <a href="contact.html" class="font-medium hover:text-blue-600">お問い合わせ</a>
         </div>
     </nav>
 
@@ -68,7 +74,7 @@
                             <p class="text-gray-600">業務効率化や新規事業支援</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-6">お客様のビジネス課題を徹底分析し、最適なIT戦略を提案します。デジタルトランスフォーーメーション(DX)推進から業務プロセス改善まで、幅広い分野で専門的なコンサルティングを提供します。</p>
+                    <p class="text-gray-600 mb-6">お客様のビジネス課題を徹底分析し、最適なIT戦略を提案します。デジタルトランスフォーメーション(DX)推進から業務プロセス改善まで、幅広い分野で専門的なコンサルティングを提供します。</p>
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-start">
                             <i data-feather="check" class="blue-accent mr-2 mt-1"></i>
@@ -76,7 +82,7 @@
                         </li>
                         <li class="flex items-start">
                             <i data-feather="check" class="blue-accent mr-2 mt-1"></i>
-                            <span>デジタルトランスフォーーメーション戦略</span>
+                            <span>デジタルトランスフォーメーション戦略</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="check" class="blue-accent mr-2 mt-1"></i>
@@ -124,7 +130,7 @@
                             <p class="text-gray-600">Webアプリ、モバイルアプリの開発</p>
                         </div>
                     </div>
-                    <p class="text-gray-600 mb-6">お客様のニーズに合わせたオーーダーーメイドシステムを開発します。UX/UI設計からバックエンド開発まで、一貫した品質管理でプロジェクトを推進します。</p>
+                    <p class="text-gray-600 mb-6">お客様のニーズに合わせたオーダーメイドシステムを開発します。UX/UI設計からバックエンド開発まで、一貫した品質管理でプロジェクトを推進します。</p>
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-start">
                             <i data-feather="check" class="blue-accent mr-2 mt-1"></i>
@@ -266,6 +272,13 @@
             once: true
         });
         feather.replace();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
     </script>
 </body>
 </html>
