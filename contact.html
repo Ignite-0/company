@@ -3,227 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ | 未来ソリューション株式会社</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>お問い合わせ | 会社名</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Noto Sans JP', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
         .blue-accent {
-            color: #005BAC;
+            color: #2563eb;
         }
-        .bg-blue-accent {
-            background-color: #005BAC;
+        .blue-accent-bg {
+            background-color: #2563eb;
         }
-        .border-blue-accent {
-            border-color: #005BAC;
+        .blue-accent-bg:hover {
+            background-color: #1d4ed8;
         }
     </style>
 </head>
-<body class="bg-white text-gray-800">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center">
-                <i data-feather="cpu" class="blue-accent mr-2"></i>
-                <span class="text-xl font-bold blue-accent">未来ソリューション株式会社</span>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-xl font-bold blue-accent">会社名</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="font-medium hover:text-blue-600">ホーム</a>
+                    <a href="about.html" class="font-medium hover:text-blue-600">会社概要</a>
+                    <a href="services.html" class="font-medium hover:text-blue-600">サービス</a>
+                    <a href="contact.html" class="font-medium blue-accent">お問い合わせ</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-700 focus:outline-none">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
             </div>
-            <div class="hidden md:flex space-x-8">
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden flex-col space-y-4 mt-4 md:hidden">
                 <a href="index.html" class="font-medium hover:text-blue-600">ホーム</a>
                 <a href="about.html" class="font-medium hover:text-blue-600">会社概要</a>
                 <a href="services.html" class="font-medium hover:text-blue-600">サービス</a>
                 <a href="contact.html" class="font-medium blue-accent">お問い合わせ</a>
             </div>
-            <button class="md:hidden focus:outline-none">
-                <i data-feather="menu"></i>
-            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-r from-blue-50 to-gray-50 py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">お問い合わせ</h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">サービスに関するご質問やご相談はお気軽にお問い合わせください</p>
-        </div>
+    <!-- Hero -->
+    <section class="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20 text-center">
+        <h1 class="text-4xl font-bold">お問い合わせ</h1>
+        <p class="mt-4 text-lg">ご質問やご相談がございましたらお気軽にお問い合わせください。</p>
     </section>
 
-    <!-- Contact Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row">
-                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
-                    <h2 class="text-3xl font-bold mb-6">お問い合わせフォーム</h2>
-                    <form class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">名前</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">メールアドレス</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">電話番号</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                        </div>
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">件名</label>
-                            <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                                <option value="consulting">ITコンサルティングについて</option>
-                                <option value="cloud">クラウド導入支援について</option>
-                                <option value="development">システム開発について</option>
-                                <option value="security">セキュリティ対策について</option>
-                                <option value="other">その他</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">メッセージ</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-blue-accent hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-300">
-                            送信する
-                        </button>
-                    </form>
-                </div>
-                <div class="md:w-1/2 md:pl-10" data-aos="fade-left">
-                    <h2 class="text-3xl font-bold mb-6">連絡先情報</h2>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 rounded-full p-3 mr-4">
-                                <i data-feather="map-pin" class="blue-accent"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold mb-1">住所</h3>
-                                <p class="text-gray-600">東京都新宿区西新宿1-1-1<br>新宿センターービル 15階</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 rounded-full p-3 mr-4">
-                                <i data-feather="phone" class="blue-accent"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold mb-1">電話番号</h3>
-                                <p class="text-gray-600">03-1234-5678</p>
-                                <p class="text-gray-500 text-sm mt-1">受付時間: 平日 9:00〜18:00</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-blue-100 rounded-full p-3 mr-4">
-                                <i data-feather="mail" class="blue-accent"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold mb-1">メールアドレス</h3>
-                                <p class="text-gray-600">info@mirai-solutions.jp</p>
-                            </div>
-                        </div>
+    <!-- Contact Form -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Left side -->
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900">ご連絡ください</h2>
+                <p class="mt-4 text-gray-600">必要事項をご記入いただき、送信してください。担当者が確認後、ご連絡いたします。</p>
+                <div class="mt-8 space-y-4">
+                    <div class="flex items-center">
+                        <i data-feather="map-pin" class="w-6 h-6 text-blue-600"></i>
+                        <span class="ml-3 text-gray-700">東京都新宿区サンプル1-2-3</span>
                     </div>
-                    <div class="mt-10">
-                        <h3 class="text-xl font-bold mb-4">アクセスマップ</h3>
-                        <div class="bg-gray-200 rounded-lg overflow-hidden h-64">
-                            <!-- Google Map Embed -->
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8280303808788!2d139.76493611525882!3d35.68124018019432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1620000000000!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
+                    <div class="flex items-center">
+                        <i data-feather="phone" class="w-6 h-6 text-blue-600"></i>
+                        <span class="ml-3 text-gray-700">03-1234-5678</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i data-feather="mail" class="w-6 h-6 text-blue-600"></i>
+                        <span class="ml-3 text-gray-700">info@example.com</span>
                     </div>
                 </div>
             </div>
+            <!-- Right side -->
+            <form class="bg-white shadow-md rounded-lg p-8 space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">お名前</label>
+                    <input type="text" id="name" name="name" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">メールアドレス</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">メッセージ</label>
+                    <textarea id="message" name="message" rows="4" required class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+                </div>
+                <button type="submit" class="w-full py-3 px-6 blue-accent-bg text-white rounded-md shadow-md font-medium">送信</button>
+            </form>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12 text-center" data-aos="fade-up">よくある質問</h2>
-            <div class="max-w-3xl mx-auto space-y-4">
-                <div class="border border-gray-200 rounded-lg p-6" data-aos="fade-up" data-aos-delay="100">
-                    <button class="flex justify-between items-center w-full text-left">
-                        <h3 class="text-lg font-bold">無料相談はどのような内容ですか？</h3>
-                        <i data-feather="chevron-down" class="text-gray-500"></i>
+    <!-- FAQ -->
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900">よくある質問</h2>
+            <div class="mt-12 space-y-6">
+                <!-- FAQ Item -->
+                <div class="border border-gray-200 rounded-md p-4">
+                    <button class="flex justify-between items-center w-full font-medium text-gray-900">
+                        サービスに関する質問
+                        <i data-feather="chevron-down" class="w-5 h-5 text-gray-500"></i>
                     </button>
-                    <div class="mt-4 text-gray-600 hidden">
-                        <p>無料相談では、お客様のビジネス課題やIT環境についてお伺いし、最適なソリューションの方向性をご提案します。具体的な見積もりや詳細な提案は有料コンサルティングとなりますが、最初の方向性を決めるための相談は無料で承っております。</p>
-                    </div>
+                    <div class="mt-4 text-gray-600 hidden">詳細な説明がここに入ります。</div>
                 </div>
-                <div class="border border-gray-200 rounded-lg p-6" data-aos="fade-up" data-aos-delay="200">
-                    <button class="flex justify-between items-center w-full text-left">
-                        <h3 class="text-lg font-bold">対応可能な地域を教えてください</h3>
-                        <i data-feather="chevron-down" class="text-gray-500"></i>
+                <div class="border border-gray-200 rounded-md p-4">
+                    <button class="flex justify-between items-center w-full font-medium text-gray-900">
+                        契約方法について
+                        <i data-feather="chevron-down" class="w-5 h-5 text-gray-500"></i>
                     </button>
-                    <div class="mt-4 text-gray-600 hidden">
-                        <p>主に東京を中心とした関東圏で直接訪問によるコンサルティングを行っておりますが、オンラインでの相談は全国どこでも対応可能です。遠方のお客様でも、初期相談や進捗管理はオンラインで、重要なミーティング時に訪問するハイブリッド形式も可能です。</p>
-                    </div>
-                </div>
-                <div class="border border-gray-200 rounded-lg p-6" data-aos="fade-up" data-aos-delay="300">
-                    <button class="flex justify-between items-center w-full text-left">
-                        <h3 class="text-lg font-bold">緊急のサポートにも対応していますか？</h3>
-                        <i data-feather="chevron-down" class="text-gray-500"></i>
-                    </button>
-                    <div class="mt-4 text-gray-600 hidden">
-                        <p>システム障害やセキュリティインシデントなどの緊急事態には24時間365日対応可能な体制を整えております。ただし、緊急対応には別途料金が発生する場合がございますので、詳細はお問い合わせください。</p>
-                    </div>
+                    <div class="mt-4 text-gray-600 hidden">詳細な説明がここに入ります。</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">未来ソリューション株式会社</h3>
-                    <p class="text-gray-400">テクノロジーを通じて人々の生活を豊かにする</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">メニュー</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white">ホーム</a></li>
-                        <li><a href="about.html" class="text-gray-400 hover:text-white">会社概要</a></li>
-                        <li><a href="services.html" class="text-gray-400 hover:text-white">サービス</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white">お問い合わせ</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">サービス</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">ITコンサルティング</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">クラウド導入支援</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">システム開発</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">セキュリティ対策</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">連絡先</h4>
-                    <p class="text-gray-400 mb-2">東京都新宿区西新宿1-1-1</p>
-                    <p class="text-gray-400 mb-2">03-1234-5678</p>
-                    <p class="text-gray-400">info@mirai-solutions.jp</p>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© 2023 未来ソリューション株式会社. All rights reserved.</p>
-            </div>
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 会社名. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
         feather.replace();
+
+        // Mobile menu toggle
+        const menuBtn = document.querySelector("nav button");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
 
         // FAQ toggle functionality
         document.querySelectorAll('.border-gray-200 button').forEach(button => {
             button.addEventListener('click', () => {
-                const content = button.parentElement.querySelector('div');
+                const wrapper = button.parentElement;
+                const content = wrapper.querySelector('.mt-4'); // answer section
                 const icon = button.querySelector('i');
-                
+
                 if (content.classList.contains('hidden')) {
                     content.classList.remove('hidden');
                     icon.setAttribute('data-feather', 'chevron-up');
