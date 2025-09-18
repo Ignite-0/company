@@ -47,12 +47,12 @@
                 <i data-feather="menu"></i>
             </button>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden flex-col space-y-4 mt-4 px-6 md:hidden">
-            <a href="index.html" class="font-medium hover:text-blue-600">ホーム</a>
-            <a href="about.html" class="font-medium hover:text-blue-600">会社概要</a>
-            <a href="services.html" class="font-medium hover:text-blue-600">サービス</a>
-            <a href="contact.html" class="font-medium hover:text-blue-600">お問い合わせ</a>
+        <!-- Mobile Menu (Grid layout) -->
+        <div id="mobileMenu" class="hidden grid grid-cols-2 gap-4 mt-4 px-6 md:hidden">
+            <a href="index.html" class="block text-center bg-gray-100 p-3 rounded-lg font-medium hover:bg-blue-100">ホーム</a>
+            <a href="about.html" class="block text-center bg-gray-100 p-3 rounded-lg font-medium hover:bg-blue-100">会社概要</a>
+            <a href="services.html" class="block text-center bg-gray-100 p-3 rounded-lg font-medium hover:bg-blue-100">サービス</a>
+            <a href="contact.html" class="block text-center bg-gray-100 p-3 rounded-lg font-medium hover:bg-blue-100">お問い合わせ</a>
         </div>
     </nav>
 
@@ -154,6 +154,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Google Translate -->
+    <div id="google_translate_element" class="fixed bottom-4 right-4 bg-white shadow-md p-2 rounded"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'ja'}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
         AOS.init({
