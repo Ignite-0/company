@@ -1,28 +1,53 @@
+/* Global styling */
 body {
-	padding: 2rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
+    padding: 0; /* Tailwind handles spacing */
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
+    background-color: #ffffff;
+    color: #1f2937; /* Tailwind gray-800 */
+    line-height: 1.6;
 }
 
-h1 {
-	font-size: 16px;
-	margin-top: 0;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: #111827; /* Tailwind gray-900 */
 }
 
+/* Paragraphs */
 p {
-	color: rgb(107, 114, 128);
-	font-size: 15px;
-	margin-bottom: 10px;
-	margin-top: 5px;
+    color: #6b7280; /* Tailwind gray-500 */
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
+/* Card Component */
 .card {
-	max-width: 620px;
-	margin: 0 auto;
-	padding: 16px;
-	border: 1px solid lightgray;
-	border-radius: 16px;
+    max-width: 620px;
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb; /* Tailwind gray-200 */
+    border-radius: 1rem; /* Tailwind rounded-xl */
+    background-color: #f9fafb; /* Tailwind gray-50 */
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .card p:last-child {
-	margin-bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.95rem;
+    }
+    .card {
+        margin: 1rem;
+        padding: 1rem;
+    }
 }
