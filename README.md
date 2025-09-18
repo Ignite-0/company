@@ -1,4 +1,3 @@
----
 title: jpcompany
 emoji: 🐳
 colorFrom: purple
@@ -6,7 +5,9 @@ colorTo: green
 sdk: static
 pinned: false
 tags:
-  - deepsite
+  - company
 ---
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+# jpcompany 🐳
+
+A simple static website project for **jpcompany**.
